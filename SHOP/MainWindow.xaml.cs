@@ -67,7 +67,7 @@ namespace SHOP
                 TextBoxEmail.Background = Brushes.Transparent;
             }
 
-            
+
 
             var userContex = ShopEntities.GetContext();
             try
