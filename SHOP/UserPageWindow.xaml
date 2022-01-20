@@ -1,0 +1,26 @@
+﻿<Window x:Class="SHOP.UserPageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SHOP"
+       mc:Ignorable="d"
+        Title="SHOP" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#e5e5e5" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#FF673AB7" Grid.Row="0" Orientation="Horizontal" >
+            <Button Content="Склад" Height="28" Width="120"  FontFamily="Comic Sans MS" Click="Storage_Click"   />
+            <Button Content="Поставщики" Height="28" Width="120"  FontFamily="Comic Sans MS" Click="Provider_Click"/>
+            <Button Content="Статистика" Height="28" Width="120"  FontFamily="Comic Sans MS" Click="Stat_Click"/>
+            <Button Content="Заметки" Height="28" Width="120"  FontFamily="Comic Sans MS" Click="Note_Click"/>
+        </StackPanel>
+        <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Height="28" Width="95" HorizontalAlignment="Right" Margin="0 0 20 0" FontFamily="Comic Sans MS"   />
+        <Frame  ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden" Grid.Row="1" Name="MainFrame"></Frame>
+    </Grid>
+</Window>

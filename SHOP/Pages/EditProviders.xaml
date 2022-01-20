@@ -1,0 +1,68 @@
+﻿<Page x:Class="SHOP.Pages.EditProviders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SHOP.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditProviders">
+
+    <Grid Background="#ffdadada">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border  Grid.Row="1" MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <Border.Effect >
+                <DropShadowEffect BlurRadius="35" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Добавление и редактирование" FontSize="25" FontWeight="Bold" Margin="0 0 0 20" />
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Наименование:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 5">ИНН:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Адрес:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 7">Телефон:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Руководитель:</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBox Text="{Binding Наименование}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TitleText"></TextBox>
+                        <TextBox Text="{Binding ИНН}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="InnText"></TextBox>
+                        <TextBox Text="{Binding Адрес}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="AdresText">
+                            <TextBox.ToolTip>
+                                <ToolTip HasDropShadow="False" Placement="Relative" VerticalOffset="10">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock FontSize="14" FontWeight="DemiBold">Пример ввода</TextBlock>
+                                        <TextBlock FontSize="14" FontWeight="DemiBold">г.Москва ул.Мира 12</TextBlock>
+                                    </StackPanel>
+                                </ToolTip>
+                            </TextBox.ToolTip>
+                        </TextBox>
+                        <TextBox Text="{Binding Телефон}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="PhoneText">
+                            <TextBox.ToolTip>
+                                <ToolTip HasDropShadow="False" Placement="Relative" VerticalOffset="10">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock FontSize="14" FontWeight="DemiBold">Примеры ввода:</TextBlock>
+                                        <TextBlock FontSize="14" FontWeight="DemiBold">88128318686</TextBlock>
+                                        <TextBlock FontSize="14" FontWeight="DemiBold">+78118118181</TextBlock>
+                                        <TextBlock FontSize="14" FontWeight="DemiBold">+7(451)8558585 и т.п.</TextBlock>
+                                    </StackPanel>
+                                </ToolTip>
+                            </TextBox.ToolTip>
+                        </TextBox>
+                        <TextBox Text="{Binding Руководитель}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="BossText"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Center">
+                    <Button Template="{StaticResource btTemplate}" HorizontalAlignment="Left" Content="Сохранить" Name="SaveBt" Click="SaveBt_Click" Margin="0 0 20 0" FontSize="14" FontWeight="DemiBold" Width="100"/>
+                    <Button Template="{StaticResource btTemplate}" HorizontalAlignment="Right"  Content="Отмена" Name="CancelBt" Click="CancelBt_Click" Margin="20 0 0 0" FontSize="14" FontWeight="DemiBold" Width="100"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0834e13303cf4ca98090f80fc5ff3bf4" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopBDModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Заказ" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Заметки" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Клиенты" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Пользователи" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Поставщик" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.СтепеньВажности" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Тип_оплаты" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopBDModel.Товар" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="ShopBDModel.FK_Заказ_Клиенты" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopBDModel.FK_Заказ_Поставщик" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopBDModel.FK_Заказ_Тип_оплаты" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopBDModel.FK_Заказ_Товар" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopBDModel.FK_Заметки_СтепеньВажности" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopBDModel.FK_Тип_оплаты_Клиенты" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopBDModel.FK_Товар_Поставщик" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
